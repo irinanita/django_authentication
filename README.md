@@ -22,3 +22,8 @@ To access the panel add `/admin` in the url
 2. in `views.py` create the view that will render that file
 3. in `urls.py`: `from accounts.views import index` 
     in url patterns `url(r'^$',index)`
+
+`Reverse` allows us to pass the name of the url instead of the view name
+
+`from django.contrib import messages` then we need to update our `settings.py` file
+and add `MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"`
