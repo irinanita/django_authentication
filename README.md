@@ -27,3 +27,13 @@ To access the panel add `/admin` in the url
 
 `from django.contrib import messages` then we need to update our `settings.py` file
 and add `MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"`
+
+In order for django to recognise templates from a different directory we need to go
+ti `settings.py` and add `os.path.join(BASE_DIR,'templates')` to `DIRS`
+
+`@login_required` decorator - Allows us to redirect users depending on whether or not they're authenticated;
+will redirect users to the login page by default
+
+`registration_form.as_p` rende form as `p` elements
+
+`User` is the standar user object stored in the request
