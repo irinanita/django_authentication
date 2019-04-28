@@ -37,3 +37,6 @@ will redirect users to the login page by default
 `registration_form.as_p` rende form as `p` elements
 
 `User` is the standar user object stored in the request
+
+By default Django logs users in using usernames to log in users by email we need
+to add `Authentication_Backends` to `settings.py`
