@@ -40,3 +40,16 @@ will redirect users to the login page by default
 
 By default Django logs users in using usernames to log in users by email we need
 to add `Authentication_Backends` to `settings.py`
+
+# Styling Django
+to style Django forms there is a third party library that uses bootstrap
+`sudo pip3 install django_forms_bootstrap`
+Include it in `settings.py` `INSTALLED_APPS`
+Add `{%load bootstrap_tags%}` to `registration.html` just after the `{extends 'base.html'}`
+
+Instead of ` {{registration_form.as_p}}` add ` {{registration_form | as_bootstrap}}`
+
+Add `STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]` to `settings.py`
+and to `base.html` before the <html> tag add `{% load staticfiles %}`
